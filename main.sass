@@ -43,14 +43,14 @@ a
   @media screen and (max-width:1200px)
     min-height: 800px
     background-size: auto 800px
-  .btn
-    color: white
-    display: inline-block
-    padding: 5px 31px
-    font-weight: 500
-    font-size: 16px
-    margin: 50px auto
-    background: $red
+.btn
+  color: white
+  display: inline-block
+  padding: 5px 31px
+  font-weight: 500
+  font-size: 16px
+  margin: 50px auto
+  background: $red
 
 
 body
@@ -75,7 +75,7 @@ p
 
 #mainh1
   margin-left: 2vw
-  margin-top: 10vw
+  margin-top: 14vw
   background-image: url('design/xgrid.png')
   background-position: 0px 0px
   min-width: 600px
@@ -106,7 +106,7 @@ p
 .msu
   position: absolute
   right: 0
-  top: 86px
+  top: 150px
   z-index: -1!important
 
 #redribbon
@@ -253,11 +253,18 @@ p
   width: 70%
   .cols3
     display: flex
+    justify-content: space-around
+    align-items: center
   .first
-    width: 60%
+    width: 40%
   .second
-    width: 20%
-  ul
+    width: 25%
+    text-align: center
+  .third
+    width: 25%
+    text-align: center
+
+  div
     li
       padding: 20px 30px 30px 30px
       box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16)
@@ -273,3 +280,55 @@ p
   margin-top: 100px
   text-align: center
   margin-bottom: 50px
+
+.coltitle
+  padding: 0 30px
+  font-weight: 600
+
+
+.redcarpet_outer3
+  margin-top: 80px
+  width: 100%
+  background: #CA4B4A
+  .redcarpet3
+    padding: 100px 0 100px 0
+    color: white
+    background-image: url('design/figures_bg.png')
+    .inner
+      width: 80%
+      margin: auto
+      display: flex
+      align-items: center
+      justify-content: space-around
+      .first
+        width: 40%
+        h3
+          color: white
+          font-size: 40px
+          font-weight: 600
+      .second
+        background: #fff
+        width: 40%
+        padding: 30px 45px 45px 45px
+        h3
+          color: $red
+          text-align: center
+          font-size: 28px
+          font-weight: 600
+        input
+          border: 1px solid #ddd
+          padding: 15px
+          font-size: 20px
+          color: #333
+          width: 90%
+          margin-top: 10px
+        input:first-of-type
+          margin-top: 0
+        .btnr
+          color: white
+          display: inline-block
+          padding: 10px 31px
+          font-weight: 500
+          font-size: 16px
+          margin-top: 30px
+          background: $red
