@@ -8,9 +8,18 @@ $red: rgb(201, 75, 74)
 .centered
   margin: auto
 
+li
+  list-style: none
 
 a
   text-decoration: none
+
+.h2title
+  font-size: 50px
+  font-weight: 600
+  margin-top: 150px
+  text-align: center
+  margin-bottom: 50px
 
 
 #navbar
@@ -44,15 +53,6 @@ a
     background: $red
 
 
-
-
-
-div
-  // border: 1px solid cyan
-  // margin: 2px
-
-
-
 body
   font-family: "Montserrat", sans-serif
   color: $grey
@@ -67,6 +67,7 @@ h1
   font-weight: 400
 
 p
+  font-size: 20px
   line-height: 30px
   color: $lightgrey
 
@@ -113,14 +114,14 @@ p
   width: 100vw
   z-index: 2!important
   margin-top: -210px
-  padding-top: 60px
+  padding-top: 80px
   padding-bottom: 140px
   background-color: $redalpha
   h2
     margin-top: 40px
     color: white
     line-height: 0
-    font-size: 30px
+    font-size: 40px
     font-weight: 600
   div
     max-width: 80%
@@ -137,7 +138,6 @@ p
     background-color: white
     margin-right: 17px
     width: 374px
-    // min-height: 150px
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16)
     h3
       text-transform: uppercase
@@ -160,17 +160,116 @@ p
   align-items: flex-end
   display: flex
   justify-content: center
+  .left
+    width: 40%
+    img
+      width: 100%
 
 .cc
     align-items: center
 
 
-#redcarpet
-  color: white
-  p
+.redcarpet_outer
+  background: #CA4B4A
+  .redcarpet
     color: white
-    margin-right: 0
-    margin-left: 100px
-  h3
-    margin-left: 100px
-  background-image: url('design/redcarpet.png')
+    background-image: url('design/figures_bg.png')
+    p
+      color: white
+      margin-right: 0
+      margin-left: 100px
+    h3
+      margin-left: 100px
+
+
+
+.carpet_card
+  box-sizing: border-box
+  width: 80%
+  margin: 30px auto
+  padding: 50px 65px
+  .redcarpet2
+    color: white
+    background-image: url('design/figures_bg.png')
+    .carpet_cols
+      margin-top: 40px
+      display: flex
+      .first
+        min-width: 130px
+      .second
+        padding: 0 30px
+        .hnum
+          text-decoration: underline
+          font-weight: 500
+          font-size: 36px
+          line-height: 0.5em
+        p
+          margin-top: -5px
+          color: white
+    .carpet_cols:first-of-type
+    margin-top: 0
+
+
+.map_outer
+  background-color: #F8F9FB
+  padding: 95px 0 95px 0
+
+.mapcard
+  margin: auto
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16)
+  width: 80%
+  box-sizing: border-box
+  display: flex
+  align-items: stretch
+  .first
+    width: 50%
+    padding: 0 40px 40px 40px
+    h2
+      font-size: 48px
+      font-weight: 500
+    ul
+      li
+        margin-top: 70px
+        display: flex
+        justify-content: flex-end
+        .icon
+          width: 10%
+        .text
+          width: 80%
+          margin-left: 15px
+          padding-right: 20%
+          font-size: 22px
+      li:first-of-type
+        margin-top: 0
+  .second
+    width: 50%
+    .iframe
+      width: 100%
+      height: 100%
+      border: none
+
+.edulist_outer
+  margin: auto
+  width: 70%
+  .cols3
+    display: flex
+  .first
+    width: 60%
+  .second
+    width: 20%
+  ul
+    li
+      padding: 20px 30px 30px 30px
+      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16)
+
+.h4title
+  line-height: 0.3em
+  font-size: 30px
+  font-weight: 600
+
+.h3title
+  font-size: 30px
+  font-weight: 600
+  margin-top: 100px
+  text-align: center
+  margin-bottom: 50px
