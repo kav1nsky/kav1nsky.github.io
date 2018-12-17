@@ -9,10 +9,43 @@
   <!-- <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-grid.min.css"> -->
   <link rel="stylesheet" type="text/css" href="main.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&amp;subset=cyrillic" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 </head>
 <body>
   <div id="navbar">
-     
+     <div class="phsoc">
+       <div class="ph">8 (800) 555-35-35</div>
+       <div class="soc">
+         <div class="s1">
+           <img src="design/facebook.png" alt="">
+         </div>
+         <div class="s1">
+           <img src="design/vk.png" alt="">
+         </div>
+         <div class="s1">
+           <img src="design/twitter.png" alt="">
+         </div>
+       </div>
+     </div>
+     <div class="menu">
+       <div class="item"><a href="#directions">Курсы</a></div>
+       <div class="item"><a href="#">Преподаватели</a></div>
+       <div class="item"><a href="#redribbon">О нас</a></div>
+       <div class="logo">
+         <img src="design/aax.png" alt="">
+         <div class="a1">
+           <div class="f1">Be Student</div>
+           <div class="f2">Per aspera ad astra</div>
+         </div>
+       </div>
+       <div class="item"><a href="#contacts">Контакты</a></div>
+       <div class="item"><a href="#pay">Оплата</a></div>
+       <div class="item"><a href="#">Документы</a></div>
+
+     </div>
+     <div class="menubutn">
+       <a href="#" class="btna">Записаться</a>
+     </div>
   </div>
   <div id="header">
     <img class="msu" src="design/msu.png" alt="">
@@ -113,7 +146,7 @@
       </div>
     </div>
   </div>
-  <div class="map_outer">
+  <div class="map_outer" id="contacts">
     <div class="mapcard">
       <div class="first">
         <h2>Контакты</h2>
@@ -150,7 +183,7 @@
     </div>
   </div>
   <div class="edulist_outer">
-    <h2 class="h3title">Направления обучения</h2>
+    <h2 class="h3title" id="directions">Направления обучения</h2>
     <div class="cols3">
       <div class="first coltitle">
         <p>Направление подготовки</p>
@@ -216,7 +249,7 @@
     </ul>
   </div>
 </div>
-  <div class="redcarpet_outer3">
+  <div class="redcarpet_outer3" id="pay">
     <div class="redcarpet3">
       <div class="inner">
         <div class="first">
@@ -234,5 +267,8 @@
       </div>
     </div>
   </div>
+  <script>
+	  var scroll = new SmoothScroll('a[href*="#"]');
+  </script>
 </body>
 </html>
