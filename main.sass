@@ -34,7 +34,7 @@ a
   justify-content: space-between
   padding: 15px 50px 15px 25px
   .phsoc
-    width: 10%
+    width: 105
     .ph
       width: 100%
       text-align: center
@@ -51,25 +51,20 @@ a
         width: 33px
         text-align: center
   .menu
-    width: 65%
+    width: 60%
     display: flex
     justify-content: space-around
     align-items: center
     .logo
       display: flex
-      align-items: stretch
+      align-items: center
+
       img
         width: 45px
         height: 45px
       .a1
         margin-left: 5px
-      .f1
         font-size: 26px
-        margin-top: -8px
-      .f2
-        margin-top: 5px
-        margin-left: 1px
-        font-style: 14px
     .item
       a
         color: #666
@@ -388,3 +383,55 @@ p
           font-size: 16px
           margin-top: 30px
           background: $red
+
+
+#leftarrow
+  order: 0
+  cursor: pointer
+  margin-right: 10%
+
+
+#rightarrow
+  order: 4
+  cursor: pointer
+  margin-left: 10%
+
+.slider_outer
+  background-image: url("design/bgbgbg.png")
+
+.slider_wrap
+  display: flex
+  align-items: center
+  justify-content: center
+
+
+.slider
+  display: flex
+  align-items: center
+  justify-content: space-around
+  text-align: center
+  .slider_center
+    width: 370px
+    order: 2
+    margin-left: 10%
+    margin-right: 10%
+    .desc
+      display: block
+      margin-top: 45px
+      font-size: 36px
+      font-weight: 600
+  .slider_right
+    width: 260px
+    order: 3
+    .desc
+      display: none
+
+  .slider_left
+    width: 260px
+    order: 1
+    .desc
+      display: none
+  .teacherimg
+    width: 100%
+    height: auto
+    margin: auto

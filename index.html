@@ -10,7 +10,12 @@
   <link rel="stylesheet" type="text/css" href="main.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&amp;subset=cyrillic" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-</head>
+
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  </head>
 <body>
   <div id="navbar">
      <div class="phsoc">
@@ -32,18 +37,17 @@
        </div>
      </div>
      <div class="menu">
-       <div class="item"><a href="#directions">Курсы</a></div>
-       <div class="item"><a href="#">Преподаватели</a></div>
-       <div class="item"><a href="#redribbon">О нас</a></div>
+       <div class="item"><a href="#header">О нас</a></div>
+       <div class="item"><a href="#kchemu">Курсы</a></div>
+       <div class="item"><a href="#teachers">Преподаватели</a></div>
        <div class="logo">
          <img src="design/aax.png" alt="">
          <div class="a1">
-           <div class="f1">Be Student</div>
-           <div class="f2">Per aspera ad astra</div>
+           Be Student
          </div>
        </div>
        <div class="item"><a href="#contacts">Контакты</a></div>
-       <div class="item"><a href="#pay">Оплата</a></div>
+       <div class="item"><a href="#directions">Оплата</a></div>
        <div class="item"><a href="#">Документы</a></div>
 
      </div>
@@ -85,7 +89,7 @@
       <p>Преподаватели являются студентами университета, что позволяет им взглянуть на образовательный процесс под разными углами.</p>
     </div>
   </div>
-  <div class="h2title">
+  <div class="h2title" id="kchemu">
     <h2 class="h2title">К чему мы готовим?</h2>
   </div>
   <div class="cols">
@@ -150,6 +154,54 @@
       </div>
     </div>
   </div>
+
+  <div class="slider_outer"  id="teachers">
+    <div class="h2title" style="margin-top: 100px;">
+      Наши преподаватели
+    </div>
+    <div class="slider_wrap">
+      <div>
+        <div id="leftarrow"> <img src="design/left.png" alt=""> </div>
+      </div>
+      <div class="slider">
+        <div style="display:none">
+          <img src="design/teacher.png" alt="" class="teacherimg">
+          <div class="desc">
+            Стас
+          </div>
+        </div>
+        <div class="slider_left">
+          <img src="design/teacher.png" alt="" class="teacherimg">
+          <div class="desc">
+            Алексей
+          </div>
+        </div>
+        <div class="slider_center">
+          <img src="design/teacher.png" alt="" class="teacherimg">
+          <div class="desc">
+            Игнат
+          </div>
+        </div>
+        <div class="slider_right">
+          <img src="design/teacher.png" alt="" class="teacherimg">
+          <div class="desc">
+            Павел
+          </div>
+        </div>
+        <div style="display:none">
+          <img src="design/teacher.png" alt="" class="teacherimg">
+          <div class="desc">
+            Мурад
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div id="rightarrow"> <img src="design/right.png" alt=""> </div>
+      </div>
+    </div>
+  </div>
+
   <div class="map_outer" id="contacts">
     <div class="mapcard">
       <div class="first">
@@ -160,7 +212,8 @@
               <img src="design/map-icon.png" alt="">
             </div>
             <div class="text">
-              Москва, м. Ломоносовский проспект, Мосфильмовская улица, 35
+              м. Ломоносовский проспект, Мосфильмовская улица, 35 (выход №4)
+              , также можно добраться от ст. метро: Киевская, Университет
             </div>
           </li>
           <li>
@@ -168,7 +221,7 @@
               <img src="design/map-icon.png" alt="">
             </div>
             <div class="text">
-              Также можно добраться от ст. метро: Киевская, Университет
+              Электронная почта: bestudent.school@gmail.com
             </div>
           </li>
           <li>
@@ -176,13 +229,13 @@
               <img src="design/map-icon.png" alt="">
             </div>
             <div class="text">
-              у Ломоносовского проспекта выход №4.
+              WhatsApp: 89250528621
             </div>
           </li>
         </ul>
       </div>
       <div class="second">
-        <iframe class="iframe" src="https://yandex.ru/map-widget/v1/-/CBF-REVpXD" allowfullscreen="true"></iframe>
+        <!-- <iframe class="iframe" src="https://yandex.ru/map-widget/v1/-/CBF-REVpXD" allowfullscreen="true"></iframe> -->
       </div>
     </div>
   </div>
@@ -273,6 +326,54 @@
   </div>
   <script>
 	  var scroll = new SmoothScroll('a[href*="#"]');
+  </script>
+  <script>
+    var $leftarrow = $("#leftarrow");
+    var $rightarrow = $("#rightarrow");
+
+    $leftarrow.click(function() {
+      $rightarrow.show();
+      $center = $(".slider_center");
+      $left = $(".slider_left");
+      $right = $(".slider_right");
+
+      if (!$left.prev().length) {
+        $leftarrow.hide();
+      }
+      else {
+        $left.prev().addClass("slider_left");
+        $left.prev().show();
+      }
+
+      $left.addClass("slider_center");
+      $left.removeClass("slider_left");
+      $center.addClass("slider_right");
+      $center.removeClass("slider_center");
+      $right.removeClass("slider_right");
+      $right.hide();
+    });
+
+    $rightarrow.click(function() {
+      $leftarrow.show();
+      $center = $(".slider_center");
+      $left = $(".slider_left");
+      $right = $(".slider_right");
+
+      if (!$right.next().length) {
+        $rightarrow.hide();
+      }
+      else {
+        $right.next().addClass("slider_right");
+        $right.next().show();
+      }
+
+      $right.addClass("slider_center");
+      $right.removeClass("slider_right");
+      $center.addClass("slider_left");
+      $center.removeClass("slider_center");
+      $left.removeClass("slider_left");
+      $left.hide();
+    });
   </script>
 </body>
 </html>
